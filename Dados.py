@@ -15,4 +15,16 @@ def cadastrar_dados():
                             nome, endereço = dadosprint(f"Nome: {nome}, Endereço: {endereço}")
                         else:
                             print("Erro ao ler linha do arquivo", linha)
-                    except FileNotFoundError:
+            except FileNotFoundError:
+                print("Nenhum cadastro ainda")
+                
+                def main():
+                    while true:
+                        print("\n==== Menu de opções ====")
+                        print("1. Cadastrar dados")
+                        print("Ler dados cadastrados")
+                        print("3. Sair")
+                        
+                        opção = input("Escolha uma opção")
+                    
+                        
