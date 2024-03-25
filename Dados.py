@@ -1,8 +1,11 @@
 def cadastrar_dados():
     nome= input("Digite o nome: ")
     endereço = input("Digite o endereço")
+    cep = input("Digite seu CEP")
+    cidade = input ("Digite sua cidade")
+    
     with open("dados.txt", "a")as arquivos:
-        arquivos.write(f"{nome};{endereço}\n")
+        arquivos.write(f"{nome};{endereço};{cep};{cidade}\n")
         print("Dados cadastrados com sucesso!")
         
         def ler_dados():
@@ -12,8 +15,8 @@ def cadastrar_dados():
                     for linha in arquivo:
                         dados = linha.strip().split(';')
                         if len(dados) == 2:
-                            nome, endereço = dados
-                            print(f"Nome: {nome}, Endereço: {endereço}")
+                            nome, endereço, cep, cidade = dados
+                            print(f"Nome: {nome}, Endereço: {endereço}, Cep: {cep}, Cidade {cidade}")
                         else:
                             print("Erro ao ler linha do arquivo", linha)
             except FileNotFoundError:
@@ -43,3 +46,4 @@ def cadastrar_dados():
                         
                     
                         
+                 
